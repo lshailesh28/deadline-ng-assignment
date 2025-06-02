@@ -1,1 +1,8 @@
-<p>deadline-countdown works!</p>
+<div class="countdown-container">
+    <span *ngIf="secondsLeft() !== null; else loading">
+      Seconds left to deadline: {{ secondsLeft() }}
+    </span>
+    <ng-template #loading>
+      Loading countdown...
+    </ng-template>
+  </div>
